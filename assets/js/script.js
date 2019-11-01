@@ -15,16 +15,23 @@
   let winingScore = inputScore;
   let gameOver = false;
 
+  //initials
+  p1Btn.setAttribute('disabled', 'disabled');
+  p2Btn.setAttribute('disabled', 'disabled');
+  resetBtn.setAttribute('disabled', 'disabled');
+
   function reset() {
     gameOver = false;
     p1ScoreDisplay.textContent = 0;
     p2ScoreDisplay.textContent = 0;
     p1ScoreDisplay.classList.remove('winner');
     p2ScoreDisplay.classList.remove('winner');
-    p1Btn.removeAttribute('disabled');
-    p2Btn.removeAttribute('disabled');
+    p1Btn.setAttribute('disabled', 'disabled');
+    p2Btn.setAttribute('disabled', 'disabled');
     wScoreDisplay.textContent = '';
     document.querySelector('span').remove('span');
+    resetBtn.setAttribute('disabled', 'disabled');
+    inputScore.removeAttribute('disabled');
   }
 
   p1Btn.addEventListener('click', () => {
@@ -38,6 +45,9 @@
         p2Btn.setAttribute('disabled', 'disabled');
         p1.appendChild(span).textContent = 'WINNER';
       }
+    }
+    if (gameOver) {
+      inputScore.setAttribute('disabled', 'disabled');
     }
 
     p1ScoreDisplay.textContent = randomScoreP1;
@@ -53,12 +63,18 @@
         p2.appendChild(span).textContent = 'WINNER';
       }
     }
+    if (gameOver) {
+      inputScore.setAttribute('disabled', 'disabled');
+    }
     p2ScoreDisplay.textContent = randomScoreP2;
   });
   inputScore.addEventListener('change', () => {
     winingScore = Number(inputScore.value);
     wScoreDisplay.textContent = inputScore.value;
     inputScore.value = '';
+    p1Btn.removeAttribute('disabled');
+    p2Btn.removeAttribute('disabled');
+    resetBtn.removeAttribute('disabled');
   });
 
   resetBtn.addEventListener('click', reset);

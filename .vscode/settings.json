@@ -1,0 +1,32 @@
+{
+  "git.ignoreLimitWarning": true,
+  // "editor.fontFamily": "Operator Mono SSm Lig",
+  // "editor.fontFamily": "Operator Mono Lig",
+  // "editor.fontFamily": "Operator Mono",
+  "editor.fontFamily": "Monaco",
+  "editor.fontSize": 17,
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+    // "javascript": "html"
+  },
+  "editor.wordWrap": "on",
+  "prettier.singleQuote": true,
+  "terminal.explorerKind": "external",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontFamily": "Inconsolata for powerline",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#fff",
+    "activityBar.foreground": "#000",
+    "statusBar.background": "#fff",
+    "statusBar.foreground": "#000"
+  }
+}
